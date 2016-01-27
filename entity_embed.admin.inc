@@ -317,7 +317,7 @@ function entity_embed_dialog_form_validate($form, &$form_state) {
           $entities = entity_load($entity_type, array($title));
         }
         else {
-          $entities = entity_load($entity_type, FALSE, array($entity_info['entity keys']['label'] => array($title)));
+          $entities = entity_load($entity_type, FALSE, array($entity_info['entity keys']['label'] => $title));
         }
 
         $entity = reset($entities);
